@@ -1,10 +1,19 @@
 import React, { useState } from "react";
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
+import {useAuthState} from "react-firebase-hooks/auth";
+import {auth} from '../Firebase';
 import BannerImage from '../assets/shopImage.jpg';
 import BannerImage2 from '../assets/shop.jpg';
 import '../styles/components/Home.css'
 
 const Home = () => {
+  //code login
+  const navigate = useNavigate();
+    const [user, loading, error] = useAuthState(auth);
+    const signOutClick = () =>{
+        auth.signOut(); 
+        navigate('/')
+    } //code login
   const [openLinks, setOpenLinks] = useState(false);
 
   const toggleHome = () => {
