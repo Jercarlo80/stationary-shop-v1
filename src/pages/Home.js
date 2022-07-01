@@ -11,8 +11,14 @@ const Home = () => {
   const navigate = useNavigate();
     const [user, loading, error] = useAuthState(auth);
     const signOutClick = () =>{
-        auth.signOut(); 
-        navigate('/')
+      <div className="Sign-out">
+      auth.signOut(); 
+      navigate('/')
+      <Link to ="/">
+        <button onClick={signOutClick}>Sign-out</button>
+      </Link>
+      </div>
+        
     } //code login
   const [openLinks, setOpenLinks] = useState(false);
 
@@ -38,6 +44,9 @@ const Home = () => {
         </Link>
         <Link to="/Member">
           <div className="MemberYPR"></div>
+        </Link>
+        <Link to="/">
+           <button onClick={toggleHome}>Signout</button>
         </Link>
       </div>
     </div>

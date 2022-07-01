@@ -12,11 +12,11 @@ function Navbar() {
     const toggleNavbar = () => {
         setOpenLinks(!openLinks);
     };
-    const navigate = useNavigate();
-    const [user, loading, error] = useAuthState(auth);
-    const signOutClick = () =>{
-        auth.signOut(); 
-        navigate('/')
+    // const navigate = useNavigate();
+    // const [user, loading, error] = useAuthState(auth);
+    // const signOutClick = () =>{
+    //     auth.signOut(); 
+    //     navigate('/')
     return (
         <div className="navbar">
             <div className="leftSide text-white text-center d-flex" id={openLinks ? "open" : "close"}>
@@ -26,7 +26,8 @@ function Navbar() {
                 <Link to="/Menu">Menu</Link>
                 <Link to="/Member">Member</Link>
                 <Link to="/Calculator">Calculator</Link>
-                <Link to= "/Sign Out">Signout</Link>
+                <Link to="/Sign-out">Sign-out</Link>
+                {/* <Link to= "/Sign Out">Signout</Link> */}
                 </div>
             </div>
             <div className="rightSide">
@@ -34,7 +35,8 @@ function Navbar() {
                 <Link to="/Menu">Menu</Link>
                 <Link to="/Member">Member</Link>
                 <Link to="/Calculator">Calculator</Link>
-                <Link to= "/Sign Out">Signout</Link>
+                <Link to="/Sign-out">Sign-out</Link>
+                {/* <Link to= "/Sign Out">Signout</Link> */}
                 <button onClick={toggleNavbar}>
                     <ReorderIcon />
                 </button>
@@ -44,4 +46,3 @@ function Navbar() {
 }
 
 export default Navbar;
-

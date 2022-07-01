@@ -2,7 +2,7 @@ import './App.css';
 import './styles/Features/Calculator.css'
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Login from './Login';
+import Login from './Login/Login';
 import Home from './pages/Home'
 import Menu from './pages/Menu';
 import Calculator from './Features/Calculator'

@@ -1,6 +1,6 @@
-import './App.css';
+import '../App.css';
 import { useState } from 'react';
-import {auth} from './Firebase'
+import {auth} from '../Firebase'
 import { useNavigate } from 'react-router-dom'
 import {signInWithEmailAndPassword, createUserWithEmailAndPassword} from "firebase/auth";
 
